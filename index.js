@@ -16,7 +16,7 @@ parser.addArgument([ '-l', '--lastname' ], {
 })
 parser.addArgument([ '-s', '--separators' ], {
   help: 'Accepted separator parameter',
-  defaultValue: '!#$%&*+-/=?^_`{|}~'.split('')
+  defaultValue: '!#$%&*+-/=?^_`{|}~'
 })
 parser.addArgument([ '-d', '--domain' ], {
   help: 'Domain parameter',
@@ -30,7 +30,7 @@ const firstname = prefixValidator(parser.parseArgs().firstname.toLowerCase())
 const lastname = prefixValidator(parser.parseArgs().lastname.toLowerCase())
 const domain = parser.parseArgs().domain.toLowerCase()
 const emails = []
-parser.parseArgs().separators.forEach((symbol) => {
+parser.parseArgs().separators.split('').forEach((symbol) => {
   emails.push(`${firstname}${symbol}${lastname}@${domain}`)
   emails.push(`${lastname}${symbol}${firstname}@${domain}`)
   emails.push(`${firstname.charAt(0)}${symbol}${lastname}@${domain}`)

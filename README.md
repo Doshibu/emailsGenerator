@@ -33,3 +33,9 @@ Or, run it with default values :
 ```
 npm start
 ```
+
+Email list will be generated in a **email.csv** file in the following format :
+
+```
+donald,trump,usa.org,donald.trump@usa.org
+```

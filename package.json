@@ -1,0 +1,12 @@
+{
+  "name": "node-exo",
+  "version": "1.0.0",
+  "description": "Emails generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillaume BONHOMMEAU",
+  "license": "MIT"
+}
